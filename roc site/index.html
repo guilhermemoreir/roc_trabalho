@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro Online de Classe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+  <aside class="sidebar">
+    <h2>📘 ROC</h2>
+    <ul>
+      <li><a href="#">Inicial</a></li>
+      <li><a href="#">Frequência</a></li>
+      <li><a href="#">Conteúdo</a></li>
+      <li><a href="#">Anotação</a></li>
+      <li><a href="#">Planejamento</a></li>
+      <li><a href="#">Relatórios</a></li>
+      <li><a href="#">Ajuda</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <header>
+      <h1>Registro Online de Classe</h1>
+      <p class="turma-destaque">Turma: 3º ano C - Técnico do Ensino Médio</p>
+      <p>Professor: <strong>Norberto Garcia Duran</strong></p>
+      <p>Disciplina: Programação Mobile - 2º Trimestre</p>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Tipo de Aula / Planejamento</th>
+          <th>Observações</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-conteudo">
+        <!-- Conteúdo será carregado pelo JS -->
+      </tbody>
+    </table>
+
+    <div class="card" style="margin-top: 20px;">
+      <button id="btn-home" class="btn-icon" title="Início">🏠</button>
+      <button id="btn-save" class="btn-icon" title="Salvar">💾</button>
+    </div>
+
+    <div id="formularioEdicao" class="modal hidden">
+      <div class="modal-content">
+        <h2>Editar Conteúdo</h2>
+        <label>Data:</label>
+        <input type="text" id="data" /><br />
+
+        <label>Planejamento:</label>
+        <select id="planejamento">
+          <option value="3000">3000 - Aula LinkedIn para estudantes</option>
+          <option value="1002">1002 - Configurando a Web API</option>
+        </select><br />
+
+        <label>Observações:</label>
+        <textarea id="observacoes" rows="4"></textarea><br />
+
+        <div class="modal-buttons">
+          <button onclick="salvar()">💾 Salvar</button>
+          <button onclick="cancelar()">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
